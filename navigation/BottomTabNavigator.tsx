@@ -7,7 +7,9 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import LinksScreen from '../screens/LinksScreen';
+
+import { BottomTabParamList, TabOneParamList, TabTwoParamList, LinksParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -30,6 +32,13 @@ export default function BottomTabNavigator() {
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Links"
+        component={LinksScreen}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="md-book" color={color} />,
         }}
       />
     </BottomTab.Navigator>
@@ -69,5 +78,19 @@ function TabTwoNavigator() {
         options={{ headerTitle: 'Tab Two Title' }}
       />
     </TabTwoStack.Navigator>
+  );
+}
+
+const LinksStack = createStackNavigator<LinksParamList>();
+
+function LinksNavigator() {
+    return (
+    <LinksStack.Navigator>
+      <LinksStack.Screen
+        name="LinksScreen"
+        component={LinksScreen}
+        options={{ headerTitle: 'Links Title' }}
+      />
+    </LinksStack.Navigator>
   );
 }
