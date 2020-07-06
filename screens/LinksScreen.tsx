@@ -1,11 +1,14 @@
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
+// import { View } from '../components/Themed';
 
 import StorybookUIRoot from '../storybook';
 
 export default function TabTwoScreen() {
   return (
-    <StorybookUIRoot />
+    //<View style={styles.container}>
+      <StorybookUIRoot />
+    //</View>
   );
 }
 
