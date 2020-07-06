@@ -6,6 +6,7 @@ import PercolateIcons from '../constants/Percolate';
 
 export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask }) {
   return (
+//    <SafeAreaView style={{ ...styles.ListItem, paddingHorizontal: 20 }}>
     <SafeAreaView style={styles.ListItem}>
       <TouchableOpacity onPress={() => onArchiveTask(id)}>
         {state !== 'TASK_ARCHIVED' ? (
