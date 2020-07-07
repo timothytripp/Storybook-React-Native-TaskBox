@@ -1,20 +1,22 @@
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
-// import { View } from '../components/Themed';
+import { View } from '../components/Themed';
 
 import StorybookUIRoot from '../storybook';
-
+ 
 export default function TabTwoScreen() {
   return (
-    //<View style={styles.container}>
+    // <View style={styles.container}>
       <StorybookUIRoot />
-    //</View>
+    // </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 60,
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
   },
